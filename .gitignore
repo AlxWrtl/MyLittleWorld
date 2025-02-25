@@ -4,3 +4,7 @@
 # React Router
 /.react-router/
 /build/
+
+# Prisma
+/dev.db
+.env

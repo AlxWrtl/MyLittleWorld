@@ -1,100 +1,115 @@
-# Welcome to React Router!
+# MyLittleWorld
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A modern, full-stack React application built with React Router 7, Prisma, and TailwindCSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Tech Stack
 
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- ⚛️ **React 19** - Latest version of React for building user interfaces
+- 🛣️ **React Router 7** - For client and server-side routing
+- 💾 **Prisma 6.4** - Next-generation ORM for Node.js and TypeScript
+- 🎨 **TailwindCSS 4** - Utility-first CSS framework
+- 🎯 **TypeScript** - For type-safe code
+- 🔧 **Vite** - Next Generation Frontend Tooling
+- 🎭 **Radix UI** - Unstyled, accessible components for building high‑quality design systems
+- 📦 **PNPM** - Fast, disk space efficient package manager
 
 ## Getting Started
 
+### Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- PNPM package manager
+- Docker (optional, for containerized deployment)
+
 ### Installation
 
-Install the dependencies:
+1. Install dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
+
+2. Set up your environment variables:
+   Copy `.env.example` to `.env` and update the values as needed.
 
 ### Development
 
-Start the development server with HMR:
+Start the development server:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Your application will be available at `http://localhost:5173`.
+
+For type checking:
+
+```bash
+pnpm typecheck
+```
 
 ## Building for Production
 
 Create a production build:
 
 ```bash
-npm run build
+pnpm build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-This template includes three Dockerfiles optimized for different package managers:
-
-- `Dockerfile` - for npm
-- `Dockerfile.pnpm` - for pnpm
-- `Dockerfile.bun` - for bun
-
-To build and run using Docker:
+Start the production server:
 
 ```bash
-# For npm
-docker build -t my-app .
-
-# For pnpm
-docker build -f Dockerfile.pnpm -t my-app .
-
-# For bun
-docker build -f Dockerfile.bun -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+pnpm start
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+## Docker Deployment
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+Build the Docker image:
 
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+```bash
+docker build -t mylittleworld .
 ```
 
-## Styling
+Run the container:
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+```bash
+docker run -p 3000:3000 mylittleworld
+```
+
+## Project Structure
+
+```
+mylittleworld/
+├── app/              # Application source code
+├── prisma/           # Prisma schema and migrations
+├── public/           # Static assets
+├── .react-router/    # React Router configuration
+├── components.json   # UI components configuration
+├── tsconfig.json    # TypeScript configuration
+└── vite.config.ts   # Vite configuration
+```
+
+## Features
+
+- 🚀 Server-side rendering with React Router 7
+- 📱 Modern, responsive UI with TailwindCSS and Radix UI
+- 🔒 Type-safe database operations with Prisma
+- ⚡️ Fast development with Vite and HMR
+- 🔄 Efficient dependency management with PNPM
+- 🐳 Docker support for easy deployment
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-Built with ❤️ using React Router.
+Built with ❤️ using React Router, Prisma, and TailwindCSS.
