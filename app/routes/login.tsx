@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
@@ -28,12 +29,12 @@ export default function LoginForm() {
               <div className="gap-2 sm:gap-3 grid">
                 <div className="flex items-center">
                   <Label htmlFor="password">Password</Label>
-                  <a
-                    href="#"
+                  <Link
+                    to="/"
                     className="ml-auto text-xs sm:text-sm hover:underline underline-offset-2"
                   >
                     Forgot your password?
-                  </a>
+                  </Link>
                 </div>
                 <Input id="password" type="password" required />
               </div>

@@ -1,7 +1,9 @@
+import { Link } from "react-router";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
+
 
 export default function SignUp() {
   return (
@@ -49,10 +51,8 @@ export default function SignUp() {
                 Sign Up
               </Button>
               <div className="text-xs sm:text-sm text-center">
-                Already have an account?{" "}
-                <a href="/login" className="underline underline-offset-4">
-                  Login
-                </a>
+                Already have an account?
+                <Link to="/login">Login</Link>
               </div>
             </div>
           </form>
