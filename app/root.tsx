@@ -8,7 +8,7 @@ import {
 } from "react-router";
 
 import Footer from "~/components/footer/footer";
-import { NavBar } from "~/components/navBar.tsx/navBar";
+import { NavBar } from "~/components/navBar/navBar";
 import type { Route } from "./+types/root";
 import "./app.css";
 export const links: Route.LinksFunction = () => [
